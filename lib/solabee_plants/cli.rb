@@ -1,30 +1,26 @@
 class SolabeePlants::CLI
 
  def call 
-  get_plants
-  list_plants 
-  get_user_plant
-#  menu
-# goodbye
-end 
+  puts "Welcome to Solabee's! Looking to adopt a plant?!"
+  input = "" 
+  until input == "exit"
+   get_plants
+   list_plants 
+   get_user_plant
+   next_choice
+  end 
+   goodbye
+ end 
   
   def get_plants
- # SolabeePlants::Plant.new("plant")
   @plants = SolabeePlants::Plant.all 
   end 
   
   def list_plants 
-    puts "Welcome to Solabee's! Looking to adopt a plant?!"
-    puts "Enter the number of the plant you would like more information about; type list to see all plants or type exit to close."
+    puts "Enter the number of the plant you would like more information about;"
    @plants.each.with_index(1) do |plant, i|
    puts "#{i}. #{plant.name}"
-  
-#    puts "Welcome to Solabee's! Looking to adopt a plant?!"
-#    @plants = SolabeePlants::Plant.all 
-#    @plants.each.with_index(1) do |plant, i|
-#      puts "#{i}. #{plant.name} - #{plant.price}"
    end 
-  
   end 
   
   def get_user_plant
@@ -40,38 +36,21 @@ end
     plant = @plants[chosen_plant-1]
     plant.get_descriptions 
     puts "Here is more information about the #{plant.name}."
-    plant.descriptions.each.with_index(1) do |description,i|
-      puts "#{i}. #{plant.name}" 
+    plant.descriptions.each.with_index(1) do |description|
+      puts " ~ #{plant.name}:" 
       
       # need to add #{plant.price}, #{" 
     #binding.pry 
   end 
-    
-  #  SolabeePlants::Plants.all.each.do |describe|
-  #    puts "plant.name, plant.price, plant.description"
-  #  end 
-    #get_plant 
   end 
   
-#  def menu
-#    input = nil 
-#    while input != "exit"
-#    puts "Enter the number of the plant you would like more information about; type list to see all plants or type exit to close."
-#    input = gets.strip
-    
-#    if input.to_i > 0 
-#      the_plant = @plants[input.to_i-1]
-#      puts  "#{the_plant.name} - #{the_plant.price}"
-#      elsif input == "list"
-#      list_plants
-#    else
-#      puts "input unclear. type list or exit"
-#    end
-#   end
-#   end
+  def next_choice
+    puts "Type exit or type any key to return to all plants."
+    @input = gets.strip 
+  end 
   
-#  def goodbye
-#    puts "Thank you for visiting, goodbye."
-#  end 
+  def goodbye
+    puts "Thanks for visiting, come again soon :)"
+  end 
   
 end   

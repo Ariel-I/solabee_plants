@@ -12,12 +12,11 @@ class SolabeePlants::Scraper
  
   def self.scrape_descriptions(plant)
      doc = Nokogiri::HTML(open("https://www.solabeeflowers.com/collections/plants/products/aloe-vera"))
-    price = doc.css("p.product__price")
+#    price = doc.css("p.product__price")
   
     SolabeePlants::PlantDescriptions.new("plants r cool",plant)
  #   SolabeePlants::PlantDescriptions.new("plants r not cool",plant)
   end 
-    
   
   
 end
