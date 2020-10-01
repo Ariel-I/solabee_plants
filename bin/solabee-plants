@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "solabee_plants"
+
+SolabeePlants::CLI.new.call
+
+
