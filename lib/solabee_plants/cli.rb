@@ -3,7 +3,7 @@ class SolabeePlants::CLI
  def call 
   puts "Welcome to Solabee's! Looking to adopt a plant?!"
   input = "" 
-  until input == "exit"
+  unless input == "exit"
    get_plants
    list_plants 
    get_user_plant
@@ -42,6 +42,13 @@ class SolabeePlants::CLI
       # need to add #{plant.price}, #{" 
     #binding.pry 
   end 
+  get_info
+  end 
+  
+  
+  def get_info
+    puts "plant price"
+    puts "plant description"
   end 
   
   def next_choice
