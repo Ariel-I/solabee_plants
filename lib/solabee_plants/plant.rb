@@ -1,11 +1,12 @@
 class SolabeePlants::Plant
   
-    attr_accessor :name, :descriptions
+    attr_accessor :name, :url, :descriptions
  
  @@all = []
  
  def initialize(name)
    @name = name 
+   @url = url
    @descriptions = []
    save
  end 
@@ -17,7 +18,7 @@ class SolabeePlants::Plant
  
  
  def get_descriptions
-   SolabeePlants::Scraper.scrape_descriptions(self) if @descriptions.empty?
+   SolabeePlants::Scraper.scrape_info(self) if @descriptions.empty?
  end 
  
  

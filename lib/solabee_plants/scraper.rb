@@ -1,20 +1,22 @@
 class SolabeePlants::Scraper
   
   def self.scrape_plants
-    doc = Nokogiri::HTML(open("https://www.solabeeflowers.com/collections/plants"))
-    
+    url = "https://www.solabeeflowers.com/collections/plants"
+    doc = Nokogiri::HTML(open(url))
     plants = doc.css("h3.card__name")
     plants.each do |p|
-      name = p.text
+    name = p.text
       SolabeePlants::Plant.new(name)
     end 
   end 
  
-  def self.scrape_descriptions(plant)
-     doc = Nokogiri::HTML(open("https://www.solabeeflowers.com/collections/plants/products/aloe-vera"))
-#    plant.price = doc.css("p.product__price")
- #    plant.descriptions
-  
+  def self.scrape_info(price)
+    url = "https://www.solabeeflowers.com/collections/plants/products/aloe-vera"
+    doc = Nokogiri::HTML(open(url))
+    price = doc.css("span.product__price")
+ #   discription = doc.css("div.product__description").text.strip
+    
+  #  binding.pry 
   end 
   
   
