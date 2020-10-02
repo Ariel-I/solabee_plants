@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
-require "bundler/setup"
-require "solabee_plants"
+require_relative "../lib/solabee_plants"
 
 SolabeePlants::CLI.new.call
 

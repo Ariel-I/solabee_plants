@@ -9,7 +9,3 @@ require_relative "./solabee_plants/scraper"
 
 
 
-#module SolabeePlants
- # class Error < StandardError; end
-  # Your code goes here...
-#end
