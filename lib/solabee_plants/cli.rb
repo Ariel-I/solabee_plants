@@ -3,10 +3,10 @@ class SolabeePlants::CLI
  def call 
   puts "Welcome to Solabee's! Looking to adopt a plant?!"
   input = "" 
-  unless input == "exit"
+  until input == "exit"
    get_plants
    list_plants 
-   get_user_plant
+   get_plant_info 
    next_choice
   end 
    goodbye
@@ -23,33 +23,27 @@ class SolabeePlants::CLI
    end 
   end 
   
-  def get_user_plant
+  def get_plant_info
    chosen_plant = gets.strip.to_i
-    show_description_for(chosen_plant) if valid_input(chosen_plant, @plants)
+    show_info_for(chosen_plant) if valid_input(chosen_plant, @plants)
   end 
   
   def valid_input(input, data)
     input.to_i <= data.length && input.to_i > 0 
   end 
   
-  def show_description_for(chosen_plant)
+  def show_info_for(chosen_plant)
     plant = @plants[chosen_plant-1]
     plant.get_descriptions 
     puts "Here is more information about the #{plant.name}."
-    plant.descriptions.each.with_index(1) do |description|
+    plant.info.each.with_index(1) do |info|
       puts " ~ #{plant.name}:" 
       
-      # need to add #{plant.price}, #{" 
+      # need to add #{plant.price}, #{description}" 
     #binding.pry 
   end 
-  get_info
   end 
   
-  
-  def get_info
-    puts "plant price"
-    puts "plant description"
-  end 
   
   def next_choice
     puts "Type exit or type any key to return to all plants."
