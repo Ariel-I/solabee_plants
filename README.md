@@ -1,8 +1,6 @@
 # SolabeePlants
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/solabee_plants`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Solabee Plants is a gem that scrapes the Solabee Flowers website returning the plants that are available for purchase. Upon entering the interface the user can choose a plant. After choosing the number of the plant they are interested the user will be shown the price and bio of the chosen plant. From there, they are able to either return to the list of plants or exit the interface. 
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+For scraping Solabee Flower's website in search of available plants and plant info!
 
 ## Development
 

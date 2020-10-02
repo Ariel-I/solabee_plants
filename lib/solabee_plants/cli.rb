@@ -1,28 +1,29 @@
 class SolabeePlants::CLI
 
- def call 
-  puts "Welcome to Solabee's! Looking to adopt a plant?!"
-  puts ""
-  input = "" 
-  until input == "exit"
-   get_plants
-   list_plants 
-   get_plant_info 
-   next_choice
-  end 
+  def call 
+    puts "Welcome to Solabee's! Looking to adopt a plant?!"
+    puts ""
+    input = ""   
+   while input != "exit"
+    get_plants
+    list_plants 
+    get_plant_info
+    next_choice
+   end
    goodbye
- end 
+  end 
   
   def get_plants
     @plants = SolabeePlants::Plant.all 
   end 
   
   def list_plants 
-    puts "Enter the number of the plant you would like more information about or type exit to exit"
+    puts "Enter the number of the plant you would like more information about or type exit to exit."
+    puts "Current plants:"
     @plants.each.with_index(1) do |plant, i|
     puts "#{i}. #{plant.name}"
    end 
-    puts"`,`,`,`,`,`,`,`,"
+    puts ""
     puts "So many choices! But which one shall you choose?!"
   end 
   
@@ -37,22 +38,17 @@ class SolabeePlants::CLI
   end 
   
   def show_info_for(plant)
-  # binding.pry
     plant.get_descriptions if !plant.bio && !plant.price
     puts "Here is more information about the #{plant.name}."
-    
-      puts " ~ #{plant.name}:" 
-      puts "     #{plant.price}"
-      puts "       #{plant.bio}"
-      
-      
-      # need to add #{plant.price}, 
-  #  binding.pry 
+    puts ""
+    puts " ~ #{plant.name}:" 
+    puts "    #{plant.price}"
+    puts ""
+    puts "      #{plant.bio}"
   end 
- # end 
-  
-  
+ 
   def next_choice
+    puts "********************************************************************************"
     puts "Type exit or type any key to return to all plants."
     @input = gets.strip 
   end 
