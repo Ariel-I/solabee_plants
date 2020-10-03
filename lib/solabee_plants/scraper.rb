@@ -11,7 +11,7 @@ class SolabeePlants::Scraper
   end 
  
   def self.scrape_info(plant)
-    doc = Nokogiri::HTML(open("https://www.solabeeflowers.com/collections/plants/products/#{plant.name.gsub(" ","-").gsub("'","")}"))
+    doc = Nokogiri::HTML(open("https://www.solabeeflowers.com/collections/plants/products/#{plant.name.gsub(" ","-").gsub("'","").gsub("(","").gsub(")","")}"))
     plant.price = doc.css("span.product__current-price").text 
     plant.bio = doc.css("div.product__description").text.strip
   end 

@@ -19,6 +19,6 @@ After these gems are installed you can run the program by inputting ./bin/solabe
 
 <h2>How To</h2>
 
-Interacting with the interface is the fun part! simply run the program, once you are presented with the welcome message and the list of plants choose the number of a plant you would like more information about, input that number and press enter! You will be presented with your chosen plants price and a shor bio informing you of the care needed for that specific plant. From there the user can press any key to return to the main list or type exit to end the program.
+Interacting with the interface is the fun part! simply run the program, once you are presented with the welcome message and the list of plants choose the number of a plant you would like more information about, input that number and press enter! You will be presented with your chosen plants price and a short bio informing you of the care needed for that specific plant. From there the user can press any key to return to the main list or type exit to end the program.
 
 Happy browsing!
