@@ -1,4 +1,4 @@
-<h1 align="center"> SolabeePlants </h1>
+<h1 align="center"> Solabee Plants </h1>
 
 <p align="center"> <img src="https://smartgardenguide.com/wp-content/uploads/2019/05/best-houseplants-for-beginners-2-1.jpg"> </p>
 
@@ -22,3 +22,5 @@ After these gems are installed you can run the program by inputting ./bin/solabe
 Interacting with the interface is the fun part! simply run the program, once you are presented with the welcome message and the list of plants choose the number of a plant you would like more information about, input that number and press enter! You will be presented with your chosen plants price and a short bio informing you of the care needed for that specific plant. From there the user can press any key to return to the main list or type exit to end the program.
 
 Happy browsing!
+
+<p align="center"> <img src="https://i.pinimg.com/600x315/84/2f/93/842f93be1db0ed587bda9612f3f8ef27.jpg"> </p>
