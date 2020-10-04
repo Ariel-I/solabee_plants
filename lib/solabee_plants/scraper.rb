@@ -11,10 +11,12 @@ class SolabeePlants::Scraper
   end 
  
   def self.scrape_info(plant)
-    doc = Nokogiri::HTML(open("https://www.solabeeflowers.com/collections/plants/products/#{plant.name.gsub(" ","-").gsub("'","").gsub("(","").gsub(")","")}"))
+    doc = Nokogiri::HTML(open("https://www.solabeeflowers.com/collections/plants/products/#{plant.name.gsub(" ","-").gsub("'","").gsub("(","").gsub(")","").gsub("Ctenanthe-Grey-Star","calathea-setosa").gsub("Calathea-Vittata","Calathea-Vittata-4").gsub("Calathea-zebrina","Calathea-zebrine")}"))
     plant.price = doc.css("span.product__current-price").text 
     plant.bio = doc.css("div.product__description").text.strip
   end 
+  
+  
   
   
 end
