@@ -16,7 +16,4 @@ class SolabeePlants::Scraper
     plant.bio = doc.css("div.product__description").text.strip
   end 
   
-  
-  
-  
 end

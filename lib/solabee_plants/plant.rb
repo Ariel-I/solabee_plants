@@ -18,7 +18,6 @@ class SolabeePlants::Plant
     SolabeePlants::Scraper.scrape_info(self) 
   end 
  
- 
   def save 
      @@all << self 
   end

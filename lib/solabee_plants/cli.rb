@@ -1,20 +1,21 @@
 class SolabeePlants::CLI
 
   def call 
-    @input = nil  
-  until @input == "exit"
+    input = nil  
+  until input == "exit"
     puts "Welcome to Solabee's! Looking to adopt a plant?!"
     puts ""
     get_plants
     list_plants
     get_plant_info
     next_choice
+    input = gets.strip
   end
     goodbye
   end
   
   def get_plants
-    @plants = SolabeePlants::Plant.all 
+    plants = SolabeePlants::Plant.all 
   end 
   
   def list_plants 
@@ -22,7 +23,7 @@ class SolabeePlants::CLI
     puts ""
     puts "Current plants:"
     puts ""
-    @plants.each.with_index(1) do |plant, i|
+    get_plants.each.with_index(1) do |plant, i|
     puts "#{i}. #{plant.name}"
    end 
     puts ""
@@ -31,8 +32,8 @@ class SolabeePlants::CLI
   
   def get_plant_info
     chosen_plant = gets.strip.to_i
-    plant = @plants[chosen_plant-1]
-    show_info_for(plant) if valid_input(chosen_plant, @plants)
+    plant = get_plants[chosen_plant-1]
+    show_info_for(plant) if valid_input(chosen_plant, get_plants)
   end 
   
   def valid_input(input, data)
@@ -52,7 +53,6 @@ class SolabeePlants::CLI
   def next_choice
     puts "********************************************************************************"
     puts "Type exit or type any key to return to all plants."
-    @input = gets.strip 
   end 
   
   def goodbye
