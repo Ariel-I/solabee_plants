@@ -33,6 +33,8 @@ You will be presented with your chosen plants price and a short bio informing yo
 
 Happy browsing!
 
+<p align="center"> <img src="https://i.pinimg.com/600x315/84/2f/93/842f93be1db0ed587bda9612f3f8ef27.jpg"> </p>
+
 <h2> Contributers </h2>
 This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org) code of conduct.
 
@@ -40,4 +42,3 @@ This project is intended to be a safe, welcoming space for collaboration, and co
 
 The gem is available as open source under the terms of the [MIT](https://opensource.org/licenses/MIT) License.
 
-<p align="center"> <img src="https://i.pinimg.com/600x315/84/2f/93/842f93be1db0ed587bda9612f3f8ef27.jpg"> </p>
