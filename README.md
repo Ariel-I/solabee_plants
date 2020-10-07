@@ -11,7 +11,7 @@
 
 -- You can find the Solabee Plants CLI in the github repository @ https://github.com/Ariel-I/solabee_plants --
 
-In order to properly run the program you must clone the github repository from the link provided above. After cloning the repo be sure your terminal is inthe right file by typing 'cd solabee_plants' and hitting enter. Then you must install the gems:
+In order to properly run the program you must clone the github repository from the link provided above. After cloning the repo be sure your terminal is in the right file by typing 'cd solabee_plants' and hitting enter. Then you must install the gems:
 
 
 gem intsall pry  
@@ -40,5 +40,5 @@ This project is intended to be a safe, welcoming space for collaboration, and co
 
 <h2>License</h2>
 
-The gem is available as open source under the terms of the [MIT](https://opensource.org/licenses/MIT) License.
+The project is available as open source under the terms of the [MIT](https://opensource.org/licenses/MIT) License.
 
