@@ -2,7 +2,7 @@
 
 <p align="center"> <img src="https://smartgardenguide.com/wp-content/uploads/2019/05/best-houseplants-for-beginners-2-1.jpg"> </p>
 
-**Description**
+<h2>Description</h2>
 
  Solabee Plants is a command-line interface that scrapes the Solabee Flowers website returning the plants that are available for purchase. Upon entering the interface the user can choose a plant. After choosing the number of the plant they are interested the user will be shown the price and bio of the chosen plant. From there, they are able to either return to the list of plants or exit the interface. 
 
@@ -13,11 +13,11 @@
 
 In order to properly run the program you must clone the github repository from the link provided above. After cloning the repo be sure your terminal is inthe right file by typing 'cd solabee_plants' and hitting enter. Then you must install the gems:
 
-...ruby
-'gem intsall pry'  
+
+gem intsall pry  
 
 gem install nokogiri
-...
+
 
 After these gems are installed you can run the program by inputting ./bin/solabee-plants
 
@@ -34,10 +34,9 @@ You will be presented with your chosen plants price and a short bio informing yo
 Happy browsing!
 
 <h2> Contributers </h2>
-This project is intended to be a safe, welcoming space for collaboration, and [contributors](https://www.contributor-covenant.org/) are expected to adhere to the Contributor Covenant code of conduct.
+This project is intended to be a safe, welcoming space for collaboration, and [contributors](https://www.contributor-covenant.org) are expected to adhere to the Contributor Covenant code of conduct.
 
-
-**License**
+<h2>License</h2>
 
 The gem is available as open source under the terms of the [MIT](https://opensource.org/licenses/MIT) License.
 
