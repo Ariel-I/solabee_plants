@@ -34,7 +34,7 @@ You will be presented with your chosen plants price and a short bio informing yo
 Happy browsing!
 
 <h2> Contributers </h2>
-This project is intended to be a safe, welcoming space for collaboration, and [contributors](https://www.contributor-covenant.org) are expected to adhere to the Contributor Covenant code of conduct.
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org) code of conduct.
 
 <h2>License</h2>
 
